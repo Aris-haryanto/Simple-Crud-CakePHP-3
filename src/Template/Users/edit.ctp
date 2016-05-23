@@ -31,12 +31,13 @@
 								$i = 1;
 								foreach($get_data as $data){
 									echo $this->Html->tableCells([
-																	$i++, 
+																	$i, 
 																	$data['nama'], 
 																	$data['email'],
 																	'<a href="'.$this->Url->build('/users/edit/'.$data['id'], true).'" class="btn btn-success">Edit</a>
-																	<a href="#" data-target="#delete-'.$i++.'" data-toggle="modal" class="btn btn-danger">Delete</a>'
-																]); 
+																	<a href="#" data-target="#delete-'.$i.'" data-toggle="modal" class="btn btn-danger">Delete</a>'
+																]);
+									$i++;
 								}
 							?>
 						</tbody>
